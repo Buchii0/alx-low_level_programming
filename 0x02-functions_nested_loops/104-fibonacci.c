@@ -25,7 +25,8 @@ return (length);
  */
 int main(void)
 {
-unsigned long fib1 = 1, fib2 = 2, next, mx = 100000000, fib1o = 0, fib2o = 0, nexto = 0;
+unsigned long fib1 = 1, fib2 = 2, next, mx = 100000000, 
+fib1o = 0, fib2o = 0, nexto = 0;
 short int i = 1, initial0s;
 
 while (i <= 98)
