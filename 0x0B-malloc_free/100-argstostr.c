@@ -1,43 +1,53 @@
+#include <stdio.h>
 #include "holberton.h"
-/**
- * argstostr - prints args
- * @ac: takes in width of grid
- * @av: height of grid
- * Return: the args one line at a time
- */
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string s
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s++)
+		len++;
+
+	return (len);
+}
+
+/**
+ * argstostr - concatenates all the arguments of your program
+ * @ac: argument count
+ * @av: argument vector
+ * Return: concatenated string
+ */
 char *argstostr(int ac, char **av)
 {
-	char *str;
-	int count = 0, a = 0, b = 0, c = 0;
+	int i, j, len, total;
+	int m = 0;
+	char *ptr;
 
-	if (ac == 0 || av == NULL)
+	if (!ac || !av)
 		return (NULL);
-	while (a < ac)
+	total = 0;
+	for (i = 0; i < ac; i++)
 	{
-		b = 0;
-		while (av[a][b] != '\0')
-		{
-			count++;
-			b++;
-		}
-		a++;
+		len = _strlen(av[i]) + 1;
+		total += len;
 	}
-	count = count + ac + 1;
-	str = malloc(sizeof(char) * count);
-	if (str == NULL)
-	{
+	ptr = malloc(sizeof(char) * total + 1);
+	if (!ptr)
 		return (NULL);
-	}
-	for (a = 0; a < ac; a++)
+	for (i = 0; i < ac; i++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
+		len = _strlen(av[i]);
+		for (j = 0; j < len; j++, m++)
 		{
-			str[c] = av[a][b];
-			c++;
+			ptr[m] = av[i][j];
 		}
-		str[c] = '\n';
-		c++;
+		ptr[m++] = '\n';
 	}
-	return (str);
+	ptr[m] = '\0';
+	return (ptr);
 }
