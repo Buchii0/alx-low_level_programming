@@ -27,5 +27,4 @@ No known bugs.
 
 
 ## Authors :black_nib:
-**Carlos Barros** [Github](https://github.com/cbarros7)
-                  [LinkdIn](https://www.linkedin.com/in/carlosbarros7/)
+**Okonkwo Godspower** [Github](https://github.com/Buchii0)
