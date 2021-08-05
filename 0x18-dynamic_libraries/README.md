@@ -24,7 +24,7 @@ Low-level programming projects for Holberton School Year 1
 Git clone the repository:
 
 ```
-git clone https://github.com/cbarros7/holbertonschool-low_level_programming.git
+git clone https://github.com/Buchii0/alx-low_level_programming.git
 ```
 
 ## Bugs :loudspeaker:
